@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, Route, Switch, Redirect } from 'react-router-dom';
 import Products from "./Products";
 import Category from "./Category";
+import Error from "./error";
 import Login, { fakeAuth } from "./Login";
 
 const Home = props => (
@@ -61,6 +62,7 @@ class App extends Component {
             <Route path="/category" component={Category} />
             <PrivateRoute path="/admin" component={Admin} />
             <Route path="/products" component={Products} />
+            <Route  component={Error} />
           </Switch>
         </div>
     );
